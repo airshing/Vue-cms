@@ -1,0 +1,21 @@
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react", "mobx"],
+  "plugins": [
+      "@babel/plugin-proposal-object-rest-spread",
+      "@babel/plugin-transform-runtime",
+      "@babel/plugin-transform-modules-commonjs",
+      ["component", { "strictMode": false }],
+      "@babel/plugin-transform-strict-mode"
+  ],
+  "ignore": [
+    "./src/lib/mui/js/mui.js",
+  ]
+}
+
+可以用这个模式，但是我们直接用
+  "ignore": [
+    "./src/lib/mui/js/mui.js",
+  ]
+就可以了，不用
+      ["component", { "strictMode": false }],
+      "@babel/plugin-transform-strict-mode"
